@@ -3,7 +3,10 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const TO_EMAILS = (process.env.CONTACT_TO_EMAIL || "info@stormdefender.com").split(",").map(email => email.trim());
+const TO_EMAILS = (process.env.CONTACT_TO_EMAIL || "info@stormdefender.com")
+    .split(",")
+    .map(email => email.trim())
+    .filter(Boolean);
 
 export async function sendBriefing(formData: FormData) {
     const full_name = formData.get("full_name") as string;
@@ -23,10 +26,24 @@ export async function sendBriefing(formData: FormData) {
         return { success: false, error: "Message too short (min 30 chars)." };
     }
 
+    // Final cleanup and validation of recipients
+    const validRecipients = TO_EMAILS.filter(email =>
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+        /^.+ <[^\s@]+@[^\s@]+\.[^\s@]+>$/.test(email)
+    );
+
+    if (validRecipients.length === 0) {
+        console.error("Recipient Error: No valid emails found in TO_EMAILS:", TO_EMAILS);
+        return { success: false, error: "System configuration error: No valid recipients defined." };
+    }
+
     try {
+        const toField = validRecipients.length === 1 ? validRecipients[0] : validRecipients;
+        console.log("Operational: Sending briefing to:", JSON.stringify(toField));
+
         const { data, error } = await resend.emails.send({
-            from: "Storm Defender® <info@stormdefender.com>",
-            to: TO_EMAILS,
+            from: "Storm Defender® <info@se7eninc.com>",
+            to: toField,
             subject: `Storm Defender Briefing Request — ${organization || full_name}`,
             text: `
 Full Name: ${full_name}

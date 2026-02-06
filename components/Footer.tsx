@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Youtube, Facebook, Twitter } from "lucide-react";
 
 export default function Footer() {
-    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_TO_EMAIL || "info@se7eninc.com";
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_TO_EMAIL || "info@stormdefender.com";
 
     return (
         <footer className="bg-black py-20 border-t border-white/10">
