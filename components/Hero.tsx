@@ -7,7 +7,7 @@ import StormScene from "./StormScene";
 
 export default function Hero() {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <section id="home" className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center pt-32 md:pt-20 overflow-hidden bg-black">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -15,9 +15,9 @@ export default function Hero() {
                     alt="Storm Defender Active Engagement"
                     fill
                     priority
-                    className="object-cover opacity-90"
+                    className="object-contain object-top md:object-cover md:object-center opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black pointer-events-none" />
             </div>
 
             {/* Three.js Overlay */}
@@ -25,7 +25,7 @@ export default function Hero() {
                 <StormScene />
             </div>
 
-            <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
+            <div className="relative z-20 max-w-7xl mx-auto px-6 text-center mt-[20vh] md:mt-0">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

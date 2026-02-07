@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Youtube, Facebook, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -9,7 +10,15 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start mb-16">
                     <div className="space-y-6">
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col items-start gap-3">
+                            <div className="relative w-16 h-16 rounded-xl overflow-hidden border border-white/10 mb-2">
+                                <Image
+                                    src="/images/stormdef_tornado_tanks_usflag_05.png"
+                                    alt="Storm Defender Logo"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
                             <span className="text-xl font-bold tracking-tighter uppercase text-white leading-none">Storm Defender®</span>
                         </div>
                         <p className="text-sm text-white/70 leading-relaxed font-light">
@@ -74,8 +83,8 @@ export default function Footer() {
                         © {new Date().getFullYear()} Storm Defender® All Rights Reserved
                     </p>
                     <div className="flex gap-8">
-                        <span className="text-[10px] uppercase tracking-widest text-white/40 font-bold cursor-pointer hover:text-white transition-colors">Privacy Protocol</span>
-                        <span className="text-[10px] uppercase tracking-widest text-white/40 font-bold cursor-pointer hover:text-white transition-colors">Usage Terms</span>
+                        <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/40 font-bold hover:text-white transition-colors">Privacy Protocol</Link>
+                        <Link href="/terms" className="text-[10px] uppercase tracking-widest text-white/40 font-bold hover:text-white transition-colors">Usage Terms</Link>
                     </div>
                 </div>
             </div>
