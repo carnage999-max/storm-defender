@@ -54,13 +54,13 @@ export default function Header() {
 
                 <div className="flex-shrink-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <Link href="#home" className="flex flex-col items-center group">
-                        <div className={`relative transition-all duration-500 drop-shadow-[0_0_20px_rgba(230,57,70,0.3)] rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md ${scrolled ? "w-12 h-12 md:w-14 md:h-14 mb-1" : "w-16 h-16 md:w-24 md:h-24 mb-2"
+                        <div className={`relative transition-all duration-500 drop-shadow-[0_0_30px_rgba(230,57,70,0.3)] rounded-xl overflow-hidden border border-white/10 ${scrolled ? "w-12 h-12 md:w-14 md:h-14 mb-1" : "w-16 h-16 md:w-24 md:h-24 mb-2"
                             }`}>
                             <Image
-                                src="/logo/storm-defender.png"
+                                src="/images/stormdef_tornado_tanks_usflag_05.png"
                                 alt="Storm Defender Logo"
                                 fill
-                                className="object-contain p-1"
+                                className="object-cover"
                                 priority
                             />
                         </div>

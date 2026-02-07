@@ -9,21 +9,23 @@ export default function Hero() {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-[-2]">
+            <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/stormdef_tornado_tanks_01.png"
-                    alt="Storm Defender Hero"
+                    src="/images/stormdef_tornado_tanks_usflag_05.png"
+                    alt="Storm Defender Active Engagement"
                     fill
                     priority
-                    className="object-cover opacity-60"
+                    className="object-cover opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
             </div>
 
             {/* Three.js Overlay */}
-            <StormScene />
+            <div className="absolute inset-0 z-10 pointer-events-none">
+                <StormScene />
+            </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

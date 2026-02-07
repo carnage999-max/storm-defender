@@ -61,7 +61,7 @@ function Lightning() {
 
 export default function StormScene() {
     return (
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
+        <div className="w-full h-full opacity-40">
             <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
                 <ambientLight intensity={0.5} />
                 <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
