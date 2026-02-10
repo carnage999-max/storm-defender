@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CapabilityCards from "@/components/CapabilityCards";
+import BrandSentinel from "@/components/BrandSentinel";
 import HowItWorks from "@/components/HowItWorks";
 import TornadoSection from "@/components/TornadoSection";
 import HurricaneSection from "@/components/HurricaneSection";
@@ -27,6 +28,9 @@ export default function Home() {
         />
 
         <CapabilityCards />
+
+        <BrandSentinel />
+
         <HowItWorks />
 
         <SectionImage

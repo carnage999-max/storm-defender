@@ -35,6 +35,12 @@ export default function Hero() {
                         Storm Defender® <br />
                         <span className="text-white/90">Active Atmospheric Threat Dismantling</span>
                     </h1>
+
+                    <p className="text-2xl md:text-4xl font-black uppercase tracking-tight text-white mb-8 max-w-4xl text-gradient">
+                        We don’t watch storms destroy lives and property.<br className="hidden md:block" />
+                        We chase them and dismantle them.
+                    </p>
+
                     <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-10 leading-relaxed">
                         A proactive system engineered to disrupt tornadoes and hurricanes before impact. Targeting the energy pathways of catastrophic weather.
                     </p>

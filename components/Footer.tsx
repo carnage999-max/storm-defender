@@ -11,12 +11,12 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start mb-16">
                     <div className="space-y-6">
                         <div className="flex flex-col items-start gap-3">
-                            <div className="relative w-16 h-16 rounded-xl overflow-hidden border border-white/10 mb-2">
+                            <div className="relative w-32 h-16 mb-2">
                                 <Image
-                                    src="/images/stormdef_tornado_tanks_usflag_05.png"
-                                    alt="Storm Defender Logo"
+                                    src="/logo/storm-defender.png"
+                                    alt="Storm Defender Official Logo"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain object-left"
                                 />
                             </div>
                             <span className="text-xl font-bold tracking-tighter uppercase text-white leading-none">Storm Defender®</span>

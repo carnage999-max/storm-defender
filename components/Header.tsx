@@ -53,23 +53,11 @@ export default function Header() {
                 </div>
 
                 <div className="flex-shrink-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                    <Link href="#home" className="flex flex-col items-center group">
-                        <div className={`relative transition-all duration-500 drop-shadow-[0_0_30px_rgba(230,57,70,0.3)] rounded-xl overflow-hidden border border-white/10 ${scrolled ? "w-12 h-12 md:w-14 md:h-14 mb-1" : "w-16 h-16 md:w-24 md:h-24 mb-2"
+                    <Link href="#home" className="group">
+                        <span className={`font-black tracking-[0.15em] uppercase bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent group-hover:from-brand-red group-hover:to-brand-orange transition-all duration-500 leading-none whitespace-nowrap px-4 py-2 ${scrolled ? "text-sm md:text-lg" : "text-lg md:text-2xl"
                             }`}>
-                            <Image
-                                src="/images/stormdef_tornado_tanks_usflag_05.png"
-                                alt="Storm Defender Logo"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
-                        <div className="flex flex-col items-center">
-                            <span className={`font-black tracking-[0.15em] uppercase bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent group-hover:from-brand-red group-hover:to-brand-orange transition-all duration-500 leading-none whitespace-nowrap ${scrolled ? "text-sm md:text-lg" : "text-lg md:text-2xl"
-                                }`}>
-                                Storm Defender®
-                            </span>
-                        </div>
+                            Storm Defender®
+                        </span>
                     </Link>
                 </div>
 
